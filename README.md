@@ -2,6 +2,19 @@
 
 This guide explains how to implement column masking in watsonx.data using IBM Knowledge Catalog (IKC). Column masking is a crucial data protection feature that helps secure sensitive information while maintaining data utility for authorized users.
 
+
+How to get connection information from watsonx.data Saas?
+
+<img width="1410" height="378" alt="image" src="https://github.com/user-attachments/assets/709ee2f3-4f9f-427a-88d1-423284b71f45" />
+
+<img width="385" height="356" alt="image" src="https://github.com/user-attachments/assets/6a30dde7-b1bb-44d1-aba1-ce62004980d1" />
+
+<img width="1435" height="563" alt="image" src="https://github.com/user-attachments/assets/0efd5e29-c842-4d2d-be36-13f551eea31a" />
+
+The user is normally like this:
+Username: ibmlhapikey_<name>@<domain>
+Password: API key (access: https://cloud.ibm.com/iam/apikeys from IAM)
+
 ## Prerequisites
 
 Before starting, ensure you have:
