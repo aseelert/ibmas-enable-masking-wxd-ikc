@@ -1,0 +1,47 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.navigation {
+  margin: 20px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #eaecef;
+
+  a {
+    margin-right: 15px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #1e6bb8;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: #f1f8ff;
+    }
+
+    &.active {
+      background-color: #1e6bb8;
+      color: white;
+    }
+  }
+}
+
+.footer {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eaecef;
+  
+  .prev {
+    float: left;
+  }
+  
+  .next {
+    float: right;
+  }
+  
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

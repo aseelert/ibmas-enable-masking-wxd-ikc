@@ -1,0 +1,24 @@
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+- jekyll-remote-theme
+
+title: Column Masking in watsonx.data using IKC
+description: A comprehensive guide to implementing column masking in watsonx.data using IBM Knowledge Catalog
+show_downloads: false
+
+# Navigation structure
+navigation:
+  - title: Home
+    url: /
+  - title: 1. Platform Connection
+    url: /docs/platform-connection
+  - title: 2. Catalogs
+    url: /docs/catalogs
+  - title: 3. Projects
+    url: /docs/projects
+  - title: 4. Metadata Import
+    url: /docs/metadata-import
+  - title: 5. Metadata Enrichment
+    url: /docs/metadata-enrichment
+  - title: 6. Rules and Policies
+    url: /docs/rules-policies
