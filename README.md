@@ -69,6 +69,60 @@ again add a new asset in the project (select MDE)
 <img width="1317" height="891" alt="image" src="https://github.com/user-attachments/assets/013eeb68-5289-4580-b204-5a4b0e59a78e" />
 select The data assets or assets from MDI 
 <img width="1274" height="950" alt="image" src="https://github.com/user-attachments/assets/1094934a-543e-45f5-bf94-67837a80da02" />
+select the asset an choose our options (at least select profile and category)
+<img width="2427" height="1160" alt="image" src="https://github.com/user-attachments/assets/fd342a81-98ad-4c73-bba8-cba9cdd666f7" />
+schedule the job
+<img width="1387" height="558" alt="image" src="https://github.com/user-attachments/assets/f0b3e1c5-0637-4b61-8276-b4b54fb90168" />
+<img width="2412" height="1158" alt="image" src="https://github.com/user-attachments/assets/2037dad8-6d6f-4b6d-8697-3fea9b13d572" />
+
+
+If MDI and MDE was successfully create a Rule
+<img width="323" height="680" alt="image" src="https://github.com/user-attachments/assets/5fdb0147-28cb-484c-9ee4-553d5187327a" />
+add a new protection rule
+<img width="1295" height="226" alt="image" src="https://github.com/user-attachments/assets/4a19dbfd-28a2-4f7a-a8df-b04e42091b2b" />
+<img width="1222" height="1038" alt="image" src="https://github.com/user-attachments/assets/6dd25675-1bc5-4278-9354-87ce3fd6e03d" />
+this example uses column address and redact it with a X. you can also use others like business terms or dataclasses, or others
+<img width="1710" height="1062" alt="image" src="https://github.com/user-attachments/assets/685dad90-9ebe-4802-b281-d73d675fb75b" />
+<img width="1727" height="1073" alt="image" src="https://github.com/user-attachments/assets/e7aa479c-198f-4195-ab5e-31239683b80e" />
+create a new policy to enfore the rule
+<img width="302" height="668" alt="image" src="https://github.com/user-attachments/assets/aa800d05-8e20-49d9-95ca-7a7a13f82bbd" />
+add a new policy and choose from categories
+<img width="1743" height="1073" alt="image" src="https://github.com/user-attachments/assets/09468e4f-1667-48cb-97dc-61b1f36ea0ec" />
+scroll down to add protection rule
+<img width="1764" height="1024" alt="image" src="https://github.com/user-attachments/assets/89bdb6ea-f6d2-4e72-afba-c32646392ff9" />
+<img width="1734" height="323" alt="image" src="https://github.com/user-attachments/assets/c88229a0-aec3-4d2b-89a5-bb20c8da5b39" />
+click publish
+<img width="1728" height="211" alt="image" src="https://github.com/user-attachments/assets/db32c99a-ac3c-4ffe-8c3c-b8b44f1a6065" />
+
+summary:
+- we created a connection to watsonx.data in platform connection
+- we ran MDI (meta data import) to import assets / tables into a project
+- we run profile (using MDE / meta data enrichment)
+- we create a Rule (data protection rule) to obscuse columns with name "address"
+- we assigned the Rule to a Policy
+
+Now we need to create a Catalog if not already exists and add the assets from project into the Catalog, first then the masking will work 
+<img width="309" height="430" alt="image" src="https://github.com/user-attachments/assets/90b01339-87b4-4301-9dbf-f15caff10071" />
+its important that we enable audit and enforce data protection rules
+<img width="1510" height="697" alt="image" src="https://github.com/user-attachments/assets/0a75283c-ccfe-4b60-b0e8-7900a1d1315e" />
+go back to the project and select the assets you want to publish into the enforced catalog
+<img width="1804" height="614" alt="image" src="https://github.com/user-attachments/assets/860953b6-cad5-4c47-9c49-c74eae92fad1" />
+
+check the catalog again:
+- you should see now all assets / connection which are in the catalog and which will be affected by the data protection rules
+<img width="1777" height="837" alt="image" src="https://github.com/user-attachments/assets/e330fb0f-4570-491b-97dd-ab37a92d35ac" />
+
+Next step is how we enable IKC with watsonx.data integration
+go to watsonx.data access control
+<img width="252" height="295" alt="image" src="https://github.com/user-attachments/assets/3e70d2f8-13ae-4e78-a211-d96380b883be" />
+goto integrations
+<img width="697" height="264" alt="image" src="https://github.com/user-attachments/assets/d8aa3214-4b41-424c-8dfa-0dcc99222e50" />
+add the IKC endpoint and select all catalogs which you want to use.
+<img width="670" height="378" alt="image" src="https://github.com/user-attachments/assets/8aa77dd3-c772-4a2b-a5af-778f50c1fc2b" />
+the URL endpoint is https://api.eu-de.dataplatform.cloud.ibm.com for EU (Frankfurt)
+check here for more details
+https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-ikc_integration
+
 
 
 
