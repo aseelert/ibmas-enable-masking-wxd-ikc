@@ -5,34 +5,18 @@ site_url: ""
 theme:
   name: material
   features:
-    # Navigation
-    - navigation.instant  # Instant loading of pages
-    - navigation.tracking  # URL tracking
-    - navigation.tabs  # Top-level sections as tabs
-    - navigation.tabs.sticky  # Keep tabs visible
-    - navigation.sections  # Sections in sidebar
-    - navigation.expand  # Expand all sections
-    - navigation.indexes  # Section index pages
-    - navigation.top  # Back to top button
-    - toc.integrate  # Table of contents integration
-    - toc.follow  # Follow table of contents
-    
-    # Search
-    - search.suggest  # Search suggestions
-    - search.highlight  # Search highlighting
-    - search.share  # Search sharing
-    
-    # Content
-    - content.tabs.link  # Link content tabs
-    - content.code.annotation  # Code annotations
-    - content.code.copy  # Copy code blocks
-    - content.action.edit  # Edit button
-    - content.action.view  # View source
-    - content.tooltips  # Link tooltips
-    
-    # Header
-    - header.autohide  # Auto-hide header
-    
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
   palette:
     - scheme: default
       primary: black
@@ -41,9 +25,6 @@ theme:
   favicon: assets/favicon.png
   icon:
     logo: material/database-lock
-    repo: fontawesome/brands/github
-    edit: material/pencil
-    view: material/eye
 
 extra_css:
   - https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap
@@ -51,62 +32,29 @@ extra_css:
 
 # Extensions
 markdown_extensions:
-  # Python Markdown
-  - abbr  # Abbreviations
-  - attr_list  # HTML attributes
-  - def_list  # Definition lists
-  - footnotes  # Footnotes
-  - md_in_html  # Markdown in HTML
+  - tables
+  - attr_list
+  - def_list
+  - md_in_html
   - toc:
       permalink: true
-      toc_depth: 3
-      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
-      
-  # Python Markdown Extensions
-  - pymdownx.arithmatex:  # Math equations
-      generic: true
-  - pymdownx.betterem:  # Better emphasis
-      smart_enable: all
-  - pymdownx.caret  # Superscript
-  - pymdownx.details  # Collapsible blocks
-  - pymdownx.emoji:  # Emojis
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.highlight:  # Code highlighting
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite  # Inline code highlighting
-  - pymdownx.keys  # Keyboard keys
-  - pymdownx.mark  # Highlighting
-  - pymdownx.smartsymbols  # Smart symbols
-  - pymdownx.superfences:  # Fenced code blocks
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:  # Content tabs
-      alternate_style: true
-  - pymdownx.tasklist:  # Task lists
-      custom_checkbox: true
-  - pymdownx.tilde  # Strikethrough
-  - admonition  # Admonitions
 
 plugins:
-  - search:
-      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - search
   - minify:
       minify_html: true
-  - tags:
-      tags_file: tags.md
-  - social:
-      cards_color:
-        fill: "#000000"
-        text: "#FFFFFF"
-  - git-revision-date-localized:
-      enable_creation_date: true
-      type: timeago
-  - offline
 
 # Navigation
 nav:
@@ -122,35 +70,3 @@ nav:
     - Catalogs: catalogs.md
   - Security:
     - Rules and Policies: rules-policies.md
-  - Reference:
-    - Tags: tags.md
-    - Glossary: glossary.md
-    - FAQ: faq.md
-
-# Customization
-extra:
-  analytics:
-    provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/IBM
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/u/ibmcom
-  status:
-    new: Recently added
-    deprecated: Deprecated
-  tags:
-    IBM: ibm
-    watsonx: watsonx
-    IKC: ikc
-  version:
-    provider: mike
-  consent:
-    title: Cookie consent
-    description: >- 
-      We use cookies to recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they're searching for. With your consent, you're helping us to
-      make our documentation better.
-  generator: false
