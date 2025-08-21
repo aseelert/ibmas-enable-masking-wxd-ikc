@@ -1,9 +1,3 @@
----
-layout: default
-title: Home
-nav_order: 1
----
-
 # Column Masking in watsonx.data using IBM Knowledge Catalog (IKC)
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
@@ -20,66 +14,48 @@ Before starting, ensure you have:
 - IBM Knowledge Catalog (IKC) environment
 - Service-to-service authorization configured between IKC and watsonx.data
 
-## Implementation Flow
-
-Follow these steps in order to set up data protection:
+## Documentation Sections
 
 1. [Platform Connection and IKC Integration](docs/platform-connection.md)
    - Setting up watsonx.data connection
    - Configuring IKC integration
    - Connection parameters and authentication
-   - Presto engine configuration
 
-2. [Catalogs](docs/catalogs.md)
-   - Creating and configuring catalogs
-   - Enabling enforcement
-   - Setting up audit logging
-   - Managing access controls
+2. [Metadata Import (MDI)](docs/metadata-import.md)
+   - Creating and configuring MDI jobs
+   - Importing assets and tables
+   - Scheduling and monitoring imports
 
-3. [Projects](docs/projects.md)
+3. [Metadata Enrichment (MDE)](docs/metadata-enrichment.md)
+   - Running data profiling
+   - Automatic classification
+   - Data quality analysis
+
+4. [Projects](docs/projects.md)
    - Creating projects
    - Project configuration
    - Asset management
-   - Collaboration settings
 
-4. [Metadata Import (MDI)](docs/metadata-import.md)
-   - Discovering data assets
-   - Configuring import jobs
-   - Scheduling and monitoring
-   - Verification steps
-
-5. [Metadata Enrichment (MDE)](docs/metadata-enrichment.md)
-   - Running data profiling
-   - Automatic classification
-   - Business term assignment
-   - Quality analysis
+5. [Catalogs](docs/catalogs.md)
+   - Creating and configuring catalogs
+   - Publishing assets
+   - Managing enforcement settings
 
 6. [Rules and Policies](docs/rules-policies.md)
    - Creating masking rules
    - Policy configuration
-   - Enforcement setup
-   - Testing and verification
+   - Enforcement and verification
 
 ## Quick Navigation
 
-| Step | Purpose | Key Outcomes |
-|------|----------|-------------|
-| [1. Connection](docs/platform-connection.md) | Establish connectivity | Working connection between watsonx.data and IKC |
-| [2. Catalogs](docs/catalogs.md) | Set up governance foundation | Enforced catalog ready for assets |
-| [3. Projects](docs/projects.md) | Create working environment | Organized space for data work |
-| [4. MDI](docs/metadata-import.md) | Discover data assets | Assets imported and cataloged |
-| [5. MDE](docs/metadata-enrichment.md) | Enrich metadata | Classified and profiled data |
-| [6. Rules](docs/rules-policies.md) | Implement protection | Active data masking |
-
-## Implementation Checklist
-
-- [ ] Connection established and tested
-- [ ] Catalog created with enforcement enabled
-- [ ] Project set up with proper settings
-- [ ] Assets discovered through MDI
-- [ ] Metadata enriched through MDE
-- [ ] Protection rules created and tested
-- [ ] Policies published and enforced
+| Section | Description |
+|---------|-------------|
+| [Platform Connection](docs/platform-connection.md) | Set up connections between watsonx.data and IKC |
+| [MDI](docs/metadata-import.md) | Import metadata from your data sources |
+| [MDE](docs/metadata-enrichment.md) | Enrich metadata with classifications and profiling |
+| [Projects](docs/projects.md) | Manage your data projects |
+| [Catalogs](docs/catalogs.md) | Organize and govern your data assets |
+| [Rules & Policies](docs/rules-policies.md) | Configure data protection rules |
 
 ## Support
 
