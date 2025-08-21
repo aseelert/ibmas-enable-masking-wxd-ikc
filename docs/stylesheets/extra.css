@@ -1,0 +1,30 @@
+:root {
+    --md-text-font: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    --md-code-font: "IBM Plex Mono", SFMono-Regular, Consolas, Menlo, monospace;
+}
+
+body {
+    font-family: var(--md-text-font);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.md-typeset h1 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.md-typeset h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.md-typeset h3 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.md-typeset code {
+    font-family: var(--md-code-font);
+    font-size: 13px;
+}
