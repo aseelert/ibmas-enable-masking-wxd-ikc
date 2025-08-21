@@ -60,6 +60,15 @@ After MDI import you should see all objects (tables)
 now check the tables and maybe check profiles
 <img width="2102" height="840" alt="image" src="https://github.com/user-attachments/assets/cfcdca55-0899-4a56-8b09-1a873fc2ef41" />
 <img width="2098" height="736" alt="image" src="https://github.com/user-attachments/assets/b64930ab-3a75-4067-bba2-3b3e05174958" />
+<img width="1768" height="919" alt="image" src="https://github.com/user-attachments/assets/4b5fda51-179b-4ef1-9a7e-d8daabefb09d" />
+
+now execute a Meta data enrichment to assign dataclasses and business terms automatically
+again add a new asset in the project (select MDE)
+<img width="1978" height="608" alt="image" src="https://github.com/user-attachments/assets/35a7a949-c235-4ac4-9df4-07420892fb7b" />
+<img width="1842" height="1000" alt="image" src="https://github.com/user-attachments/assets/d53f2052-2421-4391-a368-e581b0296f80" />
+<img width="1317" height="891" alt="image" src="https://github.com/user-attachments/assets/013eeb68-5289-4580-b204-5a4b0e59a78e" />
+select The data assets or assets from MDI 
+<img width="1274" height="950" alt="image" src="https://github.com/user-attachments/assets/1094934a-543e-45f5-bf94-67837a80da02" />
 
 
 
