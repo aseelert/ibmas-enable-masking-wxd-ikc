@@ -11,9 +11,59 @@ How to get connection information from watsonx.data Saas?
 
 <img width="1435" height="563" alt="image" src="https://github.com/user-attachments/assets/0efd5e29-c842-4d2d-be36-13f551eea31a" />
 
+or
+
+export JSON snipped (right above)
+<img width="1484" height="669" alt="image" src="https://github.com/user-attachments/assets/768ddfe1-7625-40b2-910e-4a8edec83258" />
+
+
 The user is normally like this:
 Username: ibmlhapikey_<name>@<domain>
 Password: API key (access: https://cloud.ibm.com/iam/apikeys from IAM)
+
+
+### add watsonx.data connection
+go to https://eu-de.dataplatform.cloud.ibm.com/data/connections/?context=cpdaas
+<img width="1479" height="627" alt="image" src="https://github.com/user-attachments/assets/b909c00e-0158-407c-9aff-16e1dd267d51" />
+
+<img width="1498" height="777" alt="image" src="https://github.com/user-attachments/assets/d99fb673-3afa-4a17-bdc8-302e80016188" />
+
+<img width="1502" height="465" alt="image" src="https://github.com/user-attachments/assets/6d1501df-f41c-435d-9ef3-170003dda192" />
+
+create a project
+https://eu-de.dataplatform.cloud.ibm.com/projects/new-project?context=cpdaas
+
+<img width="1493" height="1086" alt="image" src="https://github.com/user-attachments/assets/246a4448-48a8-4a7c-9d8e-06f70aa8dd10" />
+
+now go into the project and create a new asset
+<img width="1476" height="280" alt="image" src="https://github.com/user-attachments/assets/56db5f29-33d9-476e-9f0b-95ad34931bb6" />
+
+select Meta data import (MDI)
+<img width="1345" height="500" alt="image" src="https://github.com/user-attachments/assets/f90e40d8-58c5-4ccd-945b-a5172ef5f1b9" />
+<img width="1304" height="534" alt="image" src="https://github.com/user-attachments/assets/4d86ad65-dcf2-4429-aec7-b3134f46647f" />
+<img width="1361" height="430" alt="image" src="https://github.com/user-attachments/assets/4695bf8c-efa2-4436-88ba-ddca62a6e422" />
+select connection
+<img width="1383" height="483" alt="image" src="https://github.com/user-attachments/assets/28952ab3-accf-4bf8-bee4-80eb234f23a3" />
+<img width="1245" height="294" alt="image" src="https://github.com/user-attachments/assets/06bc3bd3-d0ef-4bee-a065-8ef339efaac2" />
+define a scope
+<img width="1352" height="618" alt="image" src="https://github.com/user-attachments/assets/01675d18-e22c-4861-80ae-d0f0f4d11ce2" />
+select catalog/schema or selected tables
+<img width="1257" height="560" alt="image" src="https://github.com/user-attachments/assets/07fe6d6c-f283-42c9-be57-46bc07914f33" />
+schedule a job
+<img width="1331" height="499" alt="image" src="https://github.com/user-attachments/assets/76529cc8-3e9e-4eae-abb5-13deb1194019" />
+<img width="1375" height="603" alt="image" src="https://github.com/user-attachments/assets/51470499-71fa-4f78-9d7b-7a8eda978875" />
+<img width="1354" height="1009" alt="image" src="https://github.com/user-attachments/assets/d8e46ca2-5153-4ed3-b5b5-e5495e4d2daf" />
+
+After MDI import you should see all objects (tables)
+<img width="1484" height="636" alt="image" src="https://github.com/user-attachments/assets/9c7cf514-5b36-40a7-9a80-68ba4ed1f641" />
+
+now check the tables and maybe check profiles
+<img width="2102" height="840" alt="image" src="https://github.com/user-attachments/assets/cfcdca55-0899-4a56-8b09-1a873fc2ef41" />
+<img width="2098" height="736" alt="image" src="https://github.com/user-attachments/assets/b64930ab-3a75-4067-bba2-3b3e05174958" />
+
+
+
+
 
 ## Prerequisites
 
