@@ -3,7 +3,33 @@
 [![Process](https://img.shields.io/badge/Process-MDI-green)](https://cloud.ibm.com/docs/data-catalog)
 [![Type](https://img.shields.io/badge/Type-Metadata-blue)](https://www.ibm.com/products/watsonx-data)
 
-This guide explains how to perform Metadata Import (MDI) to bring your data assets into IBM Knowledge Catalog.
+This guide explains how to perform Metadata Import (MDI) to discover and catalog your data assets from watsonx.data into IBM Knowledge Catalog (IKC).
+
+## Understanding Metadata Import
+
+### What is MDI?
+Metadata Import (MDI) is a discovery process that:
+- Scans your watsonx.data sources
+- Captures technical metadata about your data assets
+- Creates asset entries in IBM Knowledge Catalog
+- Enables data governance and protection features
+
+### Key Benefits
+1. **Automated Discovery**: Automatically finds and catalogs data assets
+2. **Governance Foundation**: Creates the basis for implementing data protection
+3. **Time Saving**: Eliminates manual asset registration
+4. **Consistency**: Ensures uniform metadata capture
+5. **Compliance Support**: Helps track and protect sensitive data
+
+### watsonx.data Asset Types
+MDI can discover these types of assets in watsonx.data:
+- Catalogs
+- Schemas
+- Tables (including Hive, Iceberg, Delta Lake)
+- Views
+- Columns and their data types
+- Primary/Foreign key relationships
+- Access permissions
 
 ## Setting Up MDI
 
@@ -15,6 +41,14 @@ This guide explains how to perform Metadata Import (MDI) to bring your data asse
 
 <img width="1361" height="430" alt="image" src="https://github.com/user-attachments/assets/4695bf8c-efa2-4436-88ba-ddca62a6e422" />
 
+### Discovery Process
+The MDI process follows these steps:
+1. Connects to watsonx.data source
+2. Scans for available assets
+3. Extracts technical metadata
+4. Creates catalog entries
+5. Establishes relationships
+
 ## Select Connection
 
 1. Choose your connection:
@@ -22,6 +56,13 @@ This guide explains how to perform Metadata Import (MDI) to bring your data asse
 <img width="1383" height="483" alt="image" src="https://github.com/user-attachments/assets/28952ab3-accf-4bf8-bee4-80eb234f23a3" />
 
 <img width="1245" height="294" alt="image" src="https://github.com/user-attachments/assets/06bc3bd3-d0ef-4bee-a065-8ef339efaac2" />
+
+### Connection Requirements
+For successful MDI:
+- Valid watsonx.data connection
+- Appropriate access permissions
+- Network connectivity
+- Required SSL certificates (if applicable)
 
 ## Define Scope
 
@@ -33,6 +74,14 @@ This guide explains how to perform Metadata Import (MDI) to bring your data asse
 
 <img width="1257" height="560" alt="image" src="https://github.com/user-attachments/assets/07fe6d6c-f283-42c9-be57-46bc07914f33" />
 
+### Scope Options
+You can discover:
+- Entire catalogs
+- Specific schemas
+- Selected tables
+- Views and materialized views
+- Column-level metadata
+
 ## Schedule Import Job
 
 1. Configure job schedule:
@@ -42,6 +91,12 @@ This guide explains how to perform Metadata Import (MDI) to bring your data asse
 <img width="1375" height="603" alt="image" src="https://github.com/user-attachments/assets/51470499-71fa-4f78-9d7b-7a8eda978875" />
 
 <img width="1354" height="1009" alt="image" src="https://github.com/user-attachments/assets/d8e46ca2-5153-4ed3-b5b5-e5495e4d2daf" />
+
+### Scheduling Options
+- One-time import
+- Recurring schedule
+- Custom intervals
+- Time zone selection
 
 ## Verification
 
@@ -53,7 +108,74 @@ After MDI import, check tables and profiles:
 
 <img width="1768" height="919" alt="image" src="https://github.com/user-attachments/assets/4b5fda51-179b-4ef1-9a7e-d8daabefb09d" />
 
+### Verification Steps
+1. **Check Asset Discovery**:
+   - Verify all selected assets are imported
+   - Confirm metadata accuracy
+   - Check relationship mappings
+
+2. **Review Technical Metadata**:
+   - Table and column names
+   - Data types
+   - Key relationships
+   - Access patterns
+
+3. **Validate Catalog Entries**:
+   - Asset visibility
+   - Metadata completeness
+   - Classification readiness
+
+## Best Practices
+
+### 1. Pre-Import
+- Review source assets
+- Plan discovery scope
+- Prepare access permissions
+- Document expected assets
+
+### 2. During Import
+- Monitor progress
+- Check for errors
+- Verify connectivity
+- Track resource usage
+
+### 3. Post-Import
+- Validate discovered assets
+- Review technical metadata
+- Check for missing items
+- Document any issues
+
+## Troubleshooting
+
+### Common Issues
+1. **Connection Problems**:
+   - Check network connectivity
+   - Verify credentials
+   - Validate SSL certificates
+   - Review permissions
+
+2. **Discovery Issues**:
+   - Verify asset accessibility
+   - Check scope settings
+   - Review error logs
+   - Validate source status
+
+3. **Metadata Issues**:
+   - Check for incomplete metadata
+   - Verify relationship mapping
+   - Review data type conversion
+   - Check character encoding
+
+## Next Steps
+
+After successful MDI:
+1. Review discovered assets
+2. Plan metadata enrichment (MDE)
+3. Configure governance rules
+4. Set up data protection
+
 ## References
 
 - [IBM Knowledge Catalog Documentation](https://cloud.ibm.com/docs/data-catalog)
 - [watsonx.data Integration Guide](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-ikc_integration)
+- [Metadata Discovery Best Practices](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=catalog-discovering-data-assets)
