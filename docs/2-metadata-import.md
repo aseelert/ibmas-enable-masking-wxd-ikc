@@ -125,46 +125,6 @@ After MDI import, check tables and profiles:
    - Metadata completeness
    - Classification readiness
 
-## Best Practices
-
-### 1. Pre-Import
-- Review source assets
-- Plan discovery scope
-- Prepare access permissions
-- Document expected assets
-
-### 2. During Import
-- Monitor progress
-- Check for errors
-- Verify connectivity
-- Track resource usage
-
-### 3. Post-Import
-- Validate discovered assets
-- Review technical metadata
-- Check for missing items
-- Document any issues
-
-## Troubleshooting
-
-### Common Issues
-1. **Connection Problems**:
-   - Check network connectivity
-   - Verify credentials
-   - Validate SSL certificates
-   - Review permissions
-
-2. **Discovery Issues**:
-   - Verify asset accessibility
-   - Check scope settings
-   - Review error logs
-   - Validate source status
-
-3. **Metadata Issues**:
-   - Check for incomplete metadata
-   - Verify relationship mapping
-   - Review data type conversion
-   - Check character encoding
 
 ## Next Steps
 
