@@ -1,364 +1,181 @@
 # Metadata Import (MDI)
 
+[![Process](https://img.shields.io/badge/Process-MDI-green)](https://cloud.ibm.com/docs/data-catalog)
+[![Type](https://img.shields.io/badge/Type-Metadata-blue)](https://www.ibm.com/products/watsonx-data)
+
 This guide explains how to perform Metadata Import (MDI) to discover and catalog your data assets from watsonx.data into IBM Knowledge Catalog (IKC).
 
 ## Understanding Metadata Import
 
 ### What is MDI?
-
-!!! abstract "MDI Overview"
-    Metadata Import (MDI) is a powerful discovery process that automatically catalogs and organizes your data assets.
-
-<div class="grid cards" markdown>
-
--   :material-database-search:{ .lg .middle } __Asset Discovery__
-
-    ---
-
-    Automatically scans and identifies data assets in watsonx.data
-    
-    [:octicons-arrow-right-24: Learn more](#watsonxdata-asset-types)
-
--   :material-database-import:{ .lg .middle } __Metadata Capture__
-
-    ---
-    
-    Extracts and records technical metadata about your assets
-    
-    [:octicons-arrow-right-24: See details](#review-technical-metadata)
-
--   :material-book-lock:{ .lg .middle } __Governance__
-
-    ---
-
-    Enables data protection and governance features
-    
-    [:octicons-arrow-right-24: Explore governance](#next-steps)
-
--   :material-clock-fast:{ .lg .middle } __Automation__
-
-    ---
-
-    Saves time through automated asset registration
-    
-    [:octicons-arrow-right-24: Setup guide](#setting-up-mdi)
-
-</div>
+Metadata Import (MDI) is a discovery process that:
+- Scans your watsonx.data sources
+- Captures technical metadata about your data assets
+- Creates asset entries in IBM Knowledge Catalog
+- Enables data governance and protection features
 
 ### Key Benefits
-
-<div class="grid" markdown>
-
-=== ":material-robot: Automated Discovery"
-    Automatically finds and catalogs data assets, eliminating manual work
-    
-=== ":material-shield-lock: Governance"
-    Creates the foundation for implementing data protection
-    
-=== ":material-clock-check: Time Saving"
-    Eliminates manual asset registration and reduces errors
-    
-=== ":material-check-all: Consistency"
-    Ensures uniform metadata capture across all assets
-    
-=== ":material-gavel: Compliance"
-    Helps track and protect sensitive data effectively
-
-</div>
+1. **Automated Discovery**: Automatically finds and catalogs data assets
+2. **Governance Foundation**: Creates the basis for implementing data protection
+3. **Time Saving**: Eliminates manual asset registration
+4. **Consistency**: Ensures uniform metadata capture
+5. **Compliance Support**: Helps track and protect sensitive data
 
 ### watsonx.data Asset Types
-
-!!! example "Discoverable Assets"
-    MDI can discover these types of assets in watsonx.data:
-
-    === "Data Structures"
-        - [x] Catalogs
-        - [x] Schemas
-        - [x] Tables (Hive, Iceberg, Delta Lake)
-        - [x] Views
-
-    === "Metadata"
-        - [x] Columns and data types
-        - [x] Primary/Foreign key relationships
-        - [x] Access permissions
+MDI can discover these types of assets in watsonx.data:
+- Catalogs
+- Schemas
+- Tables (including Hive, Iceberg, Delta Lake)
+- Views
+- Columns and their data types
+- Primary/Foreign key relationships
+- Access permissions
 
 ## Setting Up MDI
 
-### Step 1: Launch MDI
+1. Select Meta data import (MDI):
 
-!!! tip "Getting Started"
-    Follow these steps to begin your metadata import journey:
+<img width="1345" height="500" alt="image" src="https://github.com/user-attachments/assets/f90e40d8-58c5-4ccd-945b-a5172ef5f1b9" />
 
-    1. Navigate to the MDI section
-    2. Select "New Import"
-    3. Choose your source
+<img width="1304" height="534" alt="image" src="https://github.com/user-attachments/assets/4d86ad65-dcf2-4429-aec7-b3134f46647f" />
 
-=== "Select MDI"
-    ![MDI Selection](https://github.com/user-attachments/assets/f90e40d8-58c5-4ccd-945b-a5172ef5f1b9)
+<img width="1361" height="430" alt="image" src="https://github.com/user-attachments/assets/4695bf8c-efa2-4436-88ba-ddca62a6e422" />
 
-=== "Configure Import"
-    ![Import Configuration](https://github.com/user-attachments/assets/4d86ad65-dcf2-4429-aec7-b3134f46647f)
+### Discovery Process
+The MDI process follows these steps:
+1. Connects to watsonx.data source
+2. Scans for available assets
+3. Extracts technical metadata
+4. Creates catalog entries
+5. Establishes relationships
 
-=== "Review Settings"
-    ![Settings Review](https://github.com/user-attachments/assets/4695bf8c-efa2-4436-88ba-ddca62a6e422)
+## Select Connection
 
-### Step 2: Discovery Process
+1. Choose your connection:
 
-```mermaid
-graph LR
-    A[Connect] -->|Establish Connection| B[Scan]
-    B -->|Find Assets| C[Extract]
-    C -->|Get Metadata| D[Create]
-    D -->|Catalog Entries| E[Link]
-    E -->|Build Relationships| F[Complete]
-    style A fill:#b2d8d8
-    style B fill:#b2d8d8
-    style C fill:#b2d8d8
-    style D fill:#b2d8d8
-    style E fill:#b2d8d8
-    style F fill:#b2d8d8
-```
+<img width="1383" height="483" alt="image" src="https://github.com/user-attachments/assets/28952ab3-accf-4bf8-bee4-80eb234f23a3" />
 
-## Connection Setup
-
-### Select Your Connection
-
-!!! note "Connection Setup"
-    Choose and configure your watsonx.data connection:
-
-=== "Connection Selection"
-    ![Select Connection](https://github.com/user-attachments/assets/28952ab3-accf-4bf8-bee4-80eb234f23a3)
-
-=== "Connection Details"
-    ![Connection Details](https://github.com/user-attachments/assets/06bc3bd3-d0ef-4bee-a065-8ef339efaac2)
+<img width="1245" height="294" alt="image" src="https://github.com/user-attachments/assets/06bc3bd3-d0ef-4bee-a065-8ef339efaac2" />
 
 ### Connection Requirements
+For successful MDI:
+- Valid watsonx.data connection
+- Appropriate access permissions
+- Network connectivity
+- Required SSL certificates (if applicable)
 
-!!! warning "Prerequisites"
-    Ensure you have all required components for successful MDI:
+## Define Scope
 
-    - [x] Valid watsonx.data connection
-    - [x] Appropriate access permissions
-    - [x] Network connectivity
-    - [x] Required SSL certificates (if applicable)
+1. Configure scope settings:
 
-## Define Import Scope
+<img width="1352" height="618" alt="image" src="https://github.com/user-attachments/assets/01675d18-e22c-4861-80ae-d0f0f4d11ce2" />
 
-### Configure Scope
+2. Select catalog/schema or tables:
 
-!!! tip "Scope Configuration"
-    Define what you want to discover:
+<img width="1257" height="560" alt="image" src="https://github.com/user-attachments/assets/07fe6d6c-f283-42c9-be57-46bc07914f33" />
 
-=== "Scope Settings"
-    ![Scope Configuration](https://github.com/user-attachments/assets/01675d18-e22c-4861-80ae-d0f0f4d11ce2)
-
-=== "Asset Selection"
-    ![Select Assets](https://github.com/user-attachments/assets/07fe6d6c-f283-42c9-be57-46bc07914f33)
-
-### Available Scope Options
-
-<div class="grid cards" markdown>
-
--   :material-database:{ .lg .middle } __Catalogs__
-
-    ---
-
-    Import entire catalogs at once
-    
--   :material-folder-table:{ .lg .middle } __Schemas__
-
-    ---
-    
-    Select specific database schemas
-    
--   :material-table:{ .lg .middle } __Tables__
-
-    ---
-
-    Choose individual tables and views
-    
--   :material-table-column:{ .lg .middle } __Columns__
-
-    ---
-
-    Detailed column-level metadata
-
-</div>
+### Scope Options
+You can discover:
+- Entire catalogs
+- Specific schemas
+- Selected tables
+- Views and materialized views
+- Column-level metadata
 
 ## Schedule Import Job
 
-### Configure Schedule
+1. Configure job schedule:
 
-!!! example "Scheduling Options"
-    Choose the timing that works best for your needs:
+<img width="1331" height="499" alt="image" src="https://github.com/user-attachments/assets/76529cc8-3e9e-4eae-abb5-13deb1194019" />
 
-=== "Basic Schedule"
-    ![Basic Schedule](https://github.com/user-attachments/assets/76529cc8-3e9e-4eae-abb5-13deb1194019)
+<img width="1375" height="603" alt="image" src="https://github.com/user-attachments/assets/51470499-71fa-4f78-9d7b-7a8eda978875" />
 
-=== "Advanced Options"
-    ![Advanced Options](https://github.com/user-attachments/assets/51470499-71fa-4f78-9d7b-7a8eda978875)
+<img width="1354" height="1009" alt="image" src="https://github.com/user-attachments/assets/d8e46ca2-5153-4ed3-b5b5-e5495e4d2daf" />
 
-=== "Final Review"
-    ![Schedule Review](https://github.com/user-attachments/assets/d8e46ca2-5153-4ed3-b5b5-e5495e4d2daf)
+### Scheduling Options
+- One-time import
+- Recurring schedule
+- Custom intervals
+- Time zone selection
 
-### Schedule Types
+## Verification
 
-<div class="grid cards" markdown>
+After MDI import, check tables and profiles:
 
--   :material-clock-outline:{ .lg .middle } __One-time__
+<img width="2102" height="840" alt="image" src="https://github.com/user-attachments/assets/cfcdca55-0899-4a56-8b09-1a873fc2ef41" />
 
-    ---
+<img width="2098" height="736" alt="image" src="https://github.com/user-attachments/assets/b64930ab-3a75-4067-bba2-3b3e05174958" />
 
-    Single import execution
-    
--   :material-refresh:{ .lg .middle } __Recurring__
+<img width="1768" height="919" alt="image" src="https://github.com/user-attachments/assets/4b5fda51-179b-4ef1-9a7e-d8daabefb09d" />
 
-    ---
-    
-    Regular automated imports
-    
--   :material-clock-edit:{ .lg .middle } __Custom__
+### Verification Steps
+1. **Check Asset Discovery**:
+   - Verify all selected assets are imported
+   - Confirm metadata accuracy
+   - Check relationship mappings
 
-    ---
+2. **Review Technical Metadata**:
+   - Table and column names
+   - Data types
+   - Key relationships
+   - Access patterns
 
-    Tailored schedule intervals
-    
--   :material-earth:{ .lg .middle } __Time Zone__
-
-    ---
-
-    Timezone-specific scheduling
-
-</div>
-
-## Verification Process
-
-### Check Import Results
-
-!!! success "Verification Steps"
-    After import completion, verify your results:
-
-=== "Table View"
-    ![Table Results](https://github.com/user-attachments/assets/cfcdca55-0899-4a56-8b09-1a873fc2ef41)
-
-=== "Profile View"
-    ![Profile Results](https://github.com/user-attachments/assets/b64930ab-3a75-4067-bba2-3b3e05174958)
-
-=== "Detailed View"
-    ![Detailed Results](https://github.com/user-attachments/assets/4b5fda51-179b-4ef1-9a7e-d8daabefb09d)
-
-### Verification Checklist
-
-<div class="grid cards" markdown>
-
--   :material-checkbox-marked:{ .lg .middle } __Asset Discovery__
-
-    ---
-
-    - Verify all selected assets
-    - Confirm metadata accuracy
-    - Check relationships
-    
--   :material-database-check:{ .lg .middle } __Technical Metadata__
-
-    ---
-    
-    - Table and column names
-    - Data types
-    - Key relationships
-    - Access patterns
-    
--   :material-book-check:{ .lg .middle } __Catalog Entries__
-
-    ---
-
-    - Asset visibility
-    - Metadata completeness
-    - Classification status
-
-</div>
+3. **Validate Catalog Entries**:
+   - Asset visibility
+   - Metadata completeness
+   - Classification readiness
 
 ## Best Practices
 
-### Implementation Guide
+### 1. Pre-Import
+- Review source assets
+- Plan discovery scope
+- Prepare access permissions
+- Document expected assets
 
-<div class="grid" markdown>
+### 2. During Import
+- Monitor progress
+- Check for errors
+- Verify connectivity
+- Track resource usage
 
-=== ":material-clipboard-check: Pre-Import"
-    - Review source assets
-    - Plan discovery scope
-    - Prepare permissions
-    - Document expectations
-
-=== ":material-progress-check: During Import"
-    - Monitor progress
-    - Check for errors
-    - Verify connectivity
-    - Track resources
-
-=== ":material-checkbox-marked-circle: Post-Import"
-    - Validate assets
-    - Review metadata
-    - Check missing items
-    - Document issues
-
-</div>
+### 3. Post-Import
+- Validate discovered assets
+- Review technical metadata
+- Check for missing items
+- Document any issues
 
 ## Troubleshooting
 
-### Common Issues and Solutions
+### Common Issues
+1. **Connection Problems**:
+   - Check network connectivity
+   - Verify credentials
+   - Validate SSL certificates
+   - Review permissions
 
-!!! warning "Known Issues"
-    Here's how to handle common problems:
+2. **Discovery Issues**:
+   - Verify asset accessibility
+   - Check scope settings
+   - Review error logs
+   - Validate source status
 
-    === "Connection Problems"
-        - Check network connectivity
-        - Verify credentials
-        - Validate SSL certificates
-        - Review permissions
-
-    === "Discovery Issues"
-        - Verify asset accessibility
-        - Check scope settings
-        - Review error logs
-        - Validate source status
-
-    === "Metadata Issues"
-        - Check incomplete metadata
-        - Verify relationships
-        - Review data types
-        - Check encoding
+3. **Metadata Issues**:
+   - Check for incomplete metadata
+   - Verify relationship mapping
+   - Review data type conversion
+   - Check character encoding
 
 ## Next Steps
 
-!!! success "Post-Import Actions"
-    After completing your MDI setup:
-
-    1. [:material-checkbox-marked-circle: Review discovered assets](#verification-process)
-    2. [:material-database-check: Plan metadata enrichment (MDE)](metadata-enrichment.md)
-    3. [:material-shield-lock: Configure governance rules](rules-policies.md)
-    4. [:material-security: Set up data protection](rules-policies.md)
+After successful MDI:
+1. Review discovered assets
+2. Plan metadata enrichment (MDE)
+3. Configure governance rules
+4. Set up data protection
 
 ## References
 
-<div class="grid cards" markdown>
-
--   :material-book:{ .lg .middle } __Documentation__
-
-    ---
-
-    [:octicons-link-external-24: IBM Knowledge Catalog Documentation](https://cloud.ibm.com/docs/data-catalog){ .md-button }
-
--   :material-link:{ .lg .middle } __Integration__
-
-    ---
-    
-    [:octicons-link-external-24: watsonx.data Integration Guide](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-ikc_integration){ .md-button }
-
--   :material-school:{ .lg .middle } __Best Practices__
-
-    ---
-
-    [:octicons-link-external-24: Metadata Discovery Best Practices](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=catalog-discovering-data-assets){ .md-button }
-
-</div>
+- [IBM Knowledge Catalog Documentation](https://cloud.ibm.com/docs/data-catalog)
+- [watsonx.data Integration Guide](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-ikc_integration)
+- [Metadata Discovery Best Practices](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=catalog-discovering-data-assets)
