@@ -44,6 +44,13 @@ This guide explains how to create and manage data protection rules and policies 
 <img width="1728" height="211" alt="image" src="https://github.com/user-attachments/assets/db32c99a-ac3c-4ffe-8c3c-b8b44f1a6065" />
 
 
+## Check Masking in Dashboard
+
+as we can see, the **address* column is masked
+
+<img width="2052" height="318" alt="image" src="https://github.com/user-attachments/assets/9d679115-fa88-4b9c-8cff-a19c326f15e6" />
+
+
 ## References
 
 - [IBM Knowledge Catalog Documentation](https://cloud.ibm.com/docs/data-catalog)
