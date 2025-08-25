@@ -21,6 +21,8 @@ This guide explains how to create and manage catalogs for data governance and ma
 
 <img width="1804" height="614" alt="image" src="https://github.com/user-attachments/assets/860953b6-cad5-4c47-9c49-c74eae92fad1" />
 
+2. **important:** Only published assets in the catalog will be affected by Rules
+
 ## Verification
 
 Check the catalog to see all assets and connections that will be affected by data protection rules:
