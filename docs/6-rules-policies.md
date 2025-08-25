@@ -46,7 +46,7 @@ This guide explains how to create and manage data protection rules and policies 
 
 ## Check Masking in Dashboard
 
-as we can see, the **address* column is masked
+as we can see, the **address** column is masked
 
 <img width="2052" height="318" alt="image" src="https://github.com/user-attachments/assets/9d679115-fa88-4b9c-8cff-a19c326f15e6" />
 
