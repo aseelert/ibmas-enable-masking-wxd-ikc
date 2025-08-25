@@ -80,27 +80,6 @@ When you run MDE, IBM Knowledge Catalog:
    - Value distributions
    - Pattern frequencies
 
-## Making the Most of MDE
-
-### Best Practices
-
-1. **Start Small**
-   - Begin with a pilot dataset
-   - Review enrichment results
-   - Adjust settings as needed
-   - Scale gradually
-
-2. **Regular Updates**
-   - Schedule periodic enrichment
-   - Monitor changes
-   - Update classifications
-   - Review suggestions
-
-3. **Quality Focus**
-   - Validate automated assignments
-   - Review data patterns
-   - Check classification accuracy
-   - Monitor quality metrics
 
 ### Pro Tips
 
