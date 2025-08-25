@@ -39,22 +39,11 @@ You can also export the connection details as a JSON snippet:
 
 The connection requires several key pieces of information:
 
-1. **User Credentials**:
+ **User Credentials**:
    - Username format: `ibmlhapikey_<n>@<domain>`
    - Password: API key from IBM Cloud IAM
    - API Key Location: https://cloud.ibm.com/iam/apikeys
 
-2. **Instance Details**:
-   - Instance CRN (Cloud Resource Name)
-   - Instance ID
-   - Instance Name
-   - Host/Endpoint URL
-
-3. **Engine Parameters**:
-   - Engine ID
-   - Engine Host
-   - Engine Port
-   - SSL Certificate
 
 ## Connecting to Dedicated Presto Engines
 
@@ -125,29 +114,6 @@ To connect to a dedicated Presto engine:
 - For EU (Frankfurt): `https://api.eu-de.dataplatform.cloud.ibm.com`
 - Select the catalogs you want to integrate
 
-## Troubleshooting Connection Issues
-
-Common issues and solutions:
-
-1. **Connection Timeout**:
-   - Check network connectivity
-   - Verify engine status
-   - Confirm port accessibility
-
-2. **Authentication Failures**:
-   - Verify API key is active
-   - Check username format
-   - Confirm IAM permissions
-
-3. **SSL/TLS Issues**:
-   - Verify certificate path
-   - Check certificate expiration
-   - Confirm SSL mode settings
-
-4. **Engine Connectivity**:
-   - Ensure engine is running
-   - Check resource allocation
-   - Verify network rules/firewalls
 
 ## References
 
