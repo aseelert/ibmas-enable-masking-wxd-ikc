@@ -43,30 +43,6 @@ This guide explains how to create and manage data protection rules and policies 
 
 <img width="1728" height="211" alt="image" src="https://github.com/user-attachments/assets/db32c99a-ac3c-4ffe-8c3c-b8b44f1a6065" />
 
-## Supported Data Types
-
-The following data types can be masked:
-- Varchar
-- Bigint
-- Boolean
-- Date
-- Double
-- Integer
-- Smallint
-- Timestamp
-- Tinyint
-- Decimal
-
-## Troubleshooting
-
-### Common Issues
-1. Masking not working:
-   - Check catalog enforcement
-   - Verify rule conditions
-   - Confirm policy status
-   - Check asset publication
-   - Verify permissions
-   - Validate data types
 
 ## References
 
