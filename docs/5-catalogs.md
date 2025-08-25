@@ -30,8 +30,8 @@ Check the catalog to see all assets and connections that will be affected by dat
 ## Critical Settings
 
 ### Enforcement Configuration
-- Enable "Enforce data protection and data location rules"
-- Turn on "Controls" for asset metadata reporting
+- Enable **"Enforce data protection and data location rules"**
+- Turn on **"Controls"** for asset metadata reporting
 - Configure duplicate asset handling
 
 ### Audit Settings
